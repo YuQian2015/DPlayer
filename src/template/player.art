@@ -115,6 +115,11 @@
             <span class="dplayer-icon-content">{{@ icons.camera }}</span>
         </div>
         {{ /if }}
+        {{ if options.draggableOverlay }}
+        <div class="dplayer-icon dplayer-draggable-overlay-icon" data-balloon="{{ tran('draggableOverlay') }}" data-balloon-pos="up">
+            <span class="dplayer-icon-content">{{@ icons.overlay }}</span>
+        </div>
+        {{ /if }}
         {{ if options.airplay }}
         <div class="dplayer-icon dplayer-airplay-icon" data-balloon="{{ tran('airplay') }}" data-balloon-pos="up">
             <span class="dplayer-icon-content">{{@ icons.airplay }}</span>
@@ -275,6 +280,15 @@
     {{ /each }}
 </div>
 <div class="dplayer-notice-list"></div>
+<div class="dplayer-draggable-overlay dplayer-draggable-overlay-hide">
+    <div>1231123</div>
+    <div>1231123</div>
+    <div>1231123</div>
+    <div>1231123</div>
+    <div>1231123</div>
+    <div>1231123</div>
+    <div>1231123</div>
+</div>
 <button class="dplayer-mobile-play">
     {{@ icons.play }}
 </button>

@@ -64,6 +64,7 @@ function initPlayers() {
             pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
             thumbnails: 'https://i.loli.net/2019/06/06/5cf8c5d9cec8510758.jpg'
         },
+        draggableOverlay: true,
         subtitle: {
             url: [
                 {
@@ -83,6 +84,16 @@ function initPlayers() {
             bottom: '10%',
             color: '#b7daff'
         },
+        highlight: [
+            {
+                time: 20,
+                text: '这是第 20 秒',
+            },
+            {
+                time: 120,
+                text: '这是 2 分钟',
+            },
+        ],
         danmaku: {
             id: '9E2E3368B56CDBB4',
             api: 'https://api.prprpr.me/dplayer/',
@@ -157,7 +168,7 @@ function initPlayers() {
     const eventsEle = document.getElementById('events');
     for (let i = 0; i < events.length; i++) {
         dp2.on(events[i], (info) => {
-            eventsEle.innerHTML += `<p>Event: ${events[i]} ${info?`Data: <span>${JSON.stringify(info)}</span>`:''}</p>`;
+            eventsEle.innerHTML += `<p>Event: ${events[i]} ${info ? `Data: <span>${JSON.stringify(info)}</span>` : ''}</p>`;
             eventsEle.scrollTop = eventsEle.scrollHeight;
         });
     }

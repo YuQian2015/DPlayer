@@ -80,6 +80,7 @@ class Template {
         this.menuItem = this.container.querySelectorAll('.dplayer-menu-item');
         this.qualityList = this.container.querySelector('.dplayer-quality-list');
         this.camareButton = this.container.querySelector('.dplayer-camera-icon');
+        this.draggableOverlayButton = this.container.querySelector('.dplayer-draggable-overlay-icon');
         this.airplayButton = this.container.querySelector('.dplayer-airplay-icon');
         this.chromecastButton = this.container.querySelector('.dplayer-chromecast-icon');
         this.subtitleButton = this.container.querySelector('.dplayer-subtitle-icon');
@@ -93,6 +94,7 @@ class Template {
         this.barPreview = this.container.querySelector('.dplayer-bar-preview');
         this.barWrap = this.container.querySelector('.dplayer-bar-wrap');
         this.noticeList = this.container.querySelector('.dplayer-notice-list');
+        this.draggableOverlay = this.container.querySelector('.dplayer-draggable-overlay');
         this.infoPanel = this.container.querySelector('.dplayer-info-panel');
         this.infoPanelClose = this.container.querySelector('.dplayer-info-panel-close');
         this.infoVersion = this.container.querySelector('.dplayer-info-panel-item-version .dplayer-info-panel-item-data');

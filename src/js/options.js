@@ -21,6 +21,7 @@ export default (options) => {
         video: {},
         contextmenu: [],
         replaceContextmenu: false,
+        draggableOverlay: false,
         mutex: true,
         pluginOptions: { hls: {}, flv: {}, dash: {}, webtorrent: {} },
         preventClickToggle: false,
