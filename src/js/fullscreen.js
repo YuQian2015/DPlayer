@@ -17,6 +17,7 @@ class FullScreen {
             if (this.isFullScreen('browser')) {
                 this.player.events.trigger('fullscreen');
             } else {
+                this.player.container.classList.remove('dplayer-browser-fulled');
                 utils.setScrollPosition(this.lastScrollPosition);
                 this.player.events.trigger('fullscreen_cancel');
             }
@@ -77,6 +78,7 @@ class FullScreen {
                 } else if (this.player.container.msRequestFullscreen) {
                     this.player.container.msRequestFullscreen();
                 }
+                this.player.container.classList.add('dplayer-browser-fulled');
                 break;
             case 'web':
                 this.player.container.classList.add('dplayer-fulled');
@@ -106,6 +108,7 @@ class FullScreen {
                 } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
                 }
+                this.player.container.classList.remove('dplayer-browser-fulled');
                 break;
             case 'web':
                 this.player.container.classList.remove('dplayer-fulled');

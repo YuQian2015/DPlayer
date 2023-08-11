@@ -20,6 +20,7 @@ export default (options) => {
         apiBackend: defaultApiBackend,
         video: {},
         contextmenu: [],
+        replaceContextmenu: false,
         mutex: true,
         pluginOptions: { hls: {}, flv: {}, dash: {}, webtorrent: {} },
         preventClickToggle: false,
@@ -50,7 +51,7 @@ export default (options) => {
         options.lang = options.lang.toLowerCase();
     }
 
-    options.contextmenu = options.contextmenu.concat([
+    options.contextmenu = options.replaceContextmenu ? options.contextmenu : options.contextmenu.concat([
         {
             key: 'video-info',
             click: (player) => {
