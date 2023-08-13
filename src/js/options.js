@@ -22,6 +22,7 @@ export default (options) => {
         contextmenu: [],
         replaceContextmenu: false,
         draggableOverlay: false,
+        palette: false,
         mutex: true,
         pluginOptions: { hls: {}, flv: {}, dash: {}, webtorrent: {} },
         preventClickToggle: false,

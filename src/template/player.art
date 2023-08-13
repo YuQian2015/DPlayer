@@ -115,9 +115,16 @@
             <span class="dplayer-icon-content">{{@ icons.camera }}</span>
         </div>
         {{ /if }}
+        {{ if options.palette }}
+        <div class="dplayer-icon dplayer-palette-icon" data-balloon="{{ tran('draggableOverlay') }}" data-balloon-pos="up">
+            <span class="dplayer-icon-content dplayer-icon-palette">{{@ icons.palette }}</span>
+            <span class="dplayer-icon-content dplayer-icon-palette-off">{{@ icons.paletteOff }}</span>
+        </div>
+        {{ /if }}
         {{ if options.draggableOverlay }}
         <div class="dplayer-icon dplayer-draggable-overlay-icon" data-balloon="{{ tran('draggableOverlay') }}" data-balloon-pos="up">
-            <span class="dplayer-icon-content">{{@ icons.overlay }}</span>
+            <span class="dplayer-icon-content dplayer-icon-overlay">{{@ icons.overlay }}</span>
+            <span class="dplayer-icon-content dplayer-icon-overlay-off">{{@ icons.overlayOff }}</span>
         </div>
         {{ /if }}
         {{ if options.airplay }}

@@ -11,6 +11,9 @@ import comment from '../assets/comment.svg';
 import commentOff from '../assets/comment-off.svg';
 import send from '../assets/send.svg';
 import pallette from '../assets/pallette.svg';
+import overlayOff from '../assets/overlay-off.svg';
+import palette from '../assets/palette.svg';
+import paletteOff from '../assets/palette-off.svg';
 import camera from '../assets/camera.svg';
 import airplay from '../assets/airplay.svg';
 import subtitle from '../assets/subtitle.svg';
@@ -37,7 +40,10 @@ const Icons = {
     loading: loading,
     airplay: airplay,
     chromecast: chromecast,
-    overlay
+    palette,
+    paletteOff,
+    overlay,
+    overlayOff
 };
 
 export default Icons;

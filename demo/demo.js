@@ -84,6 +84,7 @@ function initPlayers() {
             bottom: '10%',
             color: '#b7daff'
         },
+        palette: true,
         highlight: [
             {
                 time: 20,

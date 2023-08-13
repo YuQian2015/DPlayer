@@ -29,6 +29,7 @@ class Events {
         ];
         this.playerEvents = [
             'screenshot',
+            'palette_click',
             'thumbnails_show',
             'thumbnails_hide',
             'danmaku_show',

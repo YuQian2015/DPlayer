@@ -40,6 +40,7 @@ class Controller {
         this.initFullButton();
         this.initQualityButton();
         this.initDraggableOverlayButton();
+        this.initPaletteButton();
         this.initScreenshotButton();
         // if subtitle url not array, not init old single subtitle button
         if (this.player.options.subtitle) {
@@ -245,9 +246,18 @@ class Controller {
         }
     }
 
+    initPaletteButton() {
+        if (this.player.options.palette) {
+            this.player.template.paletteButton.addEventListener('click', () => {
+                this.player.events.trigger('palette_click');
+            });
+        }
+    }
+
     initDraggableOverlayButton() {
         if (this.player.options.draggableOverlay) {
             this.player.template.draggableOverlayButton.addEventListener('click', () => {
+                this.player.template.draggableOverlayButton.classList.toggle('open');
                 this.player.template.draggableOverlay.classList.toggle('dplayer-draggable-overlay-hide');
             });
             // target elements with the "draggable" class
@@ -331,18 +341,18 @@ class Controller {
                 canvas.height = this.player.video.videoHeight;
                 canvas.getContext('2d').drawImage(this.player.video, 0, 0, canvas.width, canvas.height);
 
-                let dataURL;
+                // let dataURL;
                 canvas.toBlob((blob) => {
-                    dataURL = URL.createObjectURL(blob);
-                    const link = document.createElement('a');
-                    link.href = dataURL;
-                    link.download = 'DPlayer.png';
-                    link.style.display = 'none';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    URL.revokeObjectURL(dataURL);
-                    this.player.events.trigger('screenshot', dataURL);
+                    // dataURL = URL.createObjectURL(blob);
+                    // const link = document.createElement('a');
+                    // link.href = dataURL;
+                    // link.download = 'DPlayer.png';
+                    // link.style.display = 'none';
+                    // document.body.appendChild(link);
+                    // link.click();
+                    // document.body.removeChild(link);
+                    // URL.revokeObjectURL(dataURL);
+                    this.player.events.trigger('screenshot', blob);
                 });
             });
         }
