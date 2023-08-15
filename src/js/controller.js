@@ -255,6 +255,22 @@ class Controller {
     }
 
     initDraggableOverlayButton() {
+        this.player.events.on('webfullscreen', () => {
+            const { clientHeight, clientWidth } = this.player.template.videoWrap;
+            const { clientHeight: overlayH, clientWidth: overlayW} = this.player.template.draggableOverlay;
+            console.log(clientHeight, clientWidth, overlayH, overlayW);
+            console.log(this.player.template.draggableOverlay);
+        });
+        this.player.events.on('webfullscreen_cancel', () => {
+            console.log(this.player.template.draggableOverlay);
+        });
+        this.player.events.on('fullscreen', () => {
+            console.log(this.player.template.draggableOverlay);
+        });
+        this.player.events.on('fullscreen_cancel', () => {
+            console.log(this.player.template.draggableOverlay);
+        });
+
         if (this.player.options.draggableOverlay) {
             this.player.template.draggableOverlayButton.addEventListener('click', () => {
                 this.player.template.draggableOverlayButton.classList.toggle('open');

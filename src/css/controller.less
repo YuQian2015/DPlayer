@@ -387,14 +387,6 @@
                 .dplayer-icon-content-off {
                     display: none;
                 }
-                &.active {
-                    .dplayer-icon-content-on {
-                        display: none;
-                    }
-                    .dplayer-icon-content-off {
-                        display: block;
-                    }
-                }
             }
         }
         .dplayer-volume {
@@ -640,14 +632,6 @@
                 .dplayer-icon-content-off {
                     display: none;
                 }
-                &.active {
-                    .dplayer-icon-content-on {
-                        display: none;
-                    }
-                    .dplayer-icon-content-off {
-                        display: block;
-                    }
-                }
             }
         }
         .dplayer-quality {
@@ -785,7 +769,22 @@
         transform: translate3d(-50%, 100%, 0);
     }
 }
-
+.dplayer-web-fullscreen-fix {
+    .dplayer-controller .dplayer-icons .dplayer-icon.dplayer-full-in-icon .dplayer-icon-content-on {
+        display: none;
+    }
+    .dplayer-controller .dplayer-icons .dplayer-icon.dplayer-full-in-icon .dplayer-icon-content-off {
+        display: block;
+    }
+}
+.dplayer-browser-fulled {
+    .dplayer-controller .dplayer-icons .dplayer-full .dplayer-full-icon .dplayer-icon-content-on {
+        display: none;
+    }
+    .dplayer-controller .dplayer-icons .dplayer-full .dplayer-full-icon .dplayer-icon-content-off {
+        display: block;
+    }
+}
 .dplayer-mobile-play {
     display: none;
     width: 50px;
