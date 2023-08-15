@@ -218,12 +218,14 @@
                 </div>
             </div>
         </div>
+        <button class="dplayer-icon dplayer-full-in-icon" data-balloon="{{ tran('web-fullscreen') }}" data-balloon-pos="up">
+            <span class="dplayer-icon-content dplayer-icon-content-on">{{@ icons.fullWeb }}</span>
+            <span class="dplayer-icon-content dplayer-icon-content-off">{{@ icons.fullWebOff }}</span>
+        </button>
         <div class="dplayer-full">
-            <button class="dplayer-icon dplayer-full-in-icon" data-balloon="{{ tran('web-fullscreen') }}" data-balloon-pos="up">
-                <span class="dplayer-icon-content">{{@ icons.fullWeb }}</span>
-            </button>
             <button class="dplayer-icon dplayer-full-icon" data-balloon="{{ tran('fullscreen') }}" data-balloon-pos="up">
-                <span class="dplayer-icon-content">{{@ icons.full }}</span>
+                <span class="dplayer-icon-content dplayer-icon-content-on">{{@ icons.full }}</span>
+                <span class="dplayer-icon-content dplayer-icon-content-off">{{@ icons.fullOff }}</span>
             </button>
         </div>
     </div>
