@@ -228,7 +228,7 @@ class DPlayer {
                 .catch(() => {
                     this.pause();
                 })
-                .then(() => {});
+                .then(() => { });
         }
         this.timer.enable('loading');
         this.container.classList.remove('dplayer-paused');
@@ -686,6 +686,16 @@ class DPlayer {
 
     speed(rate) {
         this.video.playbackRate = rate;
+    }
+
+    screenshot() {
+        if (this.options.screenshot) {
+            const canvas = document.createElement('canvas');
+            canvas.width = this.video.videoWidth;
+            canvas.height = this.video.videoHeight;
+            canvas.getContext('2d').drawImage(this.video, 0, 0, canvas.width, canvas.height);
+            canvas.toBlob((blob) => { this.events.trigger('screenshot', blob); });
+        }
     }
 
     destroy() {
